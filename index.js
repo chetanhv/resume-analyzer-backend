@@ -8,7 +8,7 @@ const analyzeResume = require('./gemini');
 require('dotenv').config();
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 // Store uploaded PDFs in /uploads temporarily
 const upload = multer({ dest: 'uploads/' });
